@@ -32,6 +32,7 @@ public class DummyGym extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         txtFname = new javax.swing.JTextField();
@@ -156,9 +157,11 @@ public class DummyGym extends javax.swing.JFrame {
         jLabel18.setFont(new java.awt.Font("Segoe Script", 1, 21)); // NOI18N
         jLabel18.setText("Gender");
 
+        buttonGroup1.add(rbMale);
         rbMale.setFont(new java.awt.Font("Segoe Script", 0, 18)); // NOI18N
         rbMale.setText("Male");
 
+        buttonGroup1.add(rbFemale);
         rbFemale.setFont(new java.awt.Font("Segoe Script", 0, 18)); // NOI18N
         rbFemale.setText("Female");
 
@@ -271,9 +274,9 @@ public class DummyGym extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(33, 33, 33)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtDigitalAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtPostalorZip, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtPostalorZip, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtDigitalAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel9)
@@ -403,18 +406,18 @@ public class DummyGym extends javax.swing.JFrame {
         int rowsAffected = pst.executeUpdate();
 
         if (rowsAffected > 0) {
-            JOptionPane.showMessageDialog(null, "Data saved successfully.");
+            JOptionPane.showMessageDialog(this, "Data saved successfully.");
             System.out.println("Saved to the database.");
         } else {
-            JOptionPane.showMessageDialog(null, "Failed to save data.");
+            JOptionPane.showMessageDialog(this, "Failed to save data.");
         }
 
         // Close the connection
         conn.close();
     } catch (SQLException ex) {
-        JOptionPane.showMessageDialog(null, "Error: " + ex.getMessage());
+        JOptionPane.showMessageDialog(this, "Error: " + ex.getMessage());
          } catch (ClassNotFoundException ex) {
-            JOptionPane.showMessageDialog(null, "MySQL JDBC Driver not found.");
+            JOptionPane.showMessageDialog(this, "MySQL JDBC Driver not found.");
     }
     }//GEN-LAST:event_btnSaveActionPerformed
 
@@ -456,6 +459,7 @@ public class DummyGym extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnNew;
     private javax.swing.JButton btnSave;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JComboBox<String> cmbRegion;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
