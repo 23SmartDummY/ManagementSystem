@@ -356,18 +356,18 @@ public class DummyGym extends javax.swing.JFrame {
 
     // Validate phone number
     if (!phoneNumber.matches("\\d+")) {
-        JOptionPane.showMessageDialog(null, "Phone number must contain only numbers.");
+        JOptionPane.showMessageDialog(this, "Phone number must contain only numbers.");
         return;
     }
 
     if (phoneNumber.length() != 10) {
-        JOptionPane.showMessageDialog(null, "Phone number must be exactly 10 digits.");
+        JOptionPane.showMessageDialog(this, "Phone number must be exactly 10 digits.");
         return;
     }
 
     // Validate mandatory fields (you can add more validation logic here)
     if (fname.isEmpty() || lname.isEmpty() || address.isEmpty() || city.isEmpty() || dob.isEmpty()) {
-        JOptionPane.showMessageDialog(null, "Please fill in all mandatory fields.");
+        JOptionPane.showMessageDialog(this, "Please fill in all mandatory fields.");
         return;
     }
 
